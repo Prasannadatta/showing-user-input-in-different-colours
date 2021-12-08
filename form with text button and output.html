@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function showText() {
+                let txt = document.getElementById('text').value;
+                let result;
+                if(txt.length<5 && txt.length>0)
+                { result =txt.fontcolor('yellow');}
+                else if(txt.length>5 &&  txt.length<10)
+                { result =txt.fontcolor('red');}
+                else if(txt.length>10 )
+                { result =txt.fontcolor('green');}
+                document.getElementById('output').innerHTML= result;
+            }
+        </script> 
+    </head>
+    <body>
+        <form>
+            Enter TEXT => <input id='text' >
+            <br>
+        </form>
+        <button onclick ='showText()' id='text1' type='submit'>submit</button>
+        <div id='output'></div>
+       
+    </body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function showText() {
+                let txt = document.getElementById('text').value   ;
+                let colour1 =txt.slice(0,20).fontcolor('yellow');
+                let colour2= txt.slice(20,40).fontcolor('red');
+                let colour3 = txt.slice(40).fontcolor('green');
+                txt = colour1 + colour2 + colour3;
+                document.getElementById('output1').innerHTML= txt ;
+            }
+        </script> 
+    </head>
+    <body>
+        <form>
+            Enter TEXT => <input id='text' >
+            <br>
+        </form>
+        <button onclick ='showText()' id='text1' type='submit'>submit</button>
+        <p id='output1'></p>
+              
+    </body>
+ -->
+
